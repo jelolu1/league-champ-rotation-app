@@ -1,0 +1,27 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+
+	.request-button {
+		background-color: #222;
+		color: aliceblue;
+		padding: 12px 24px;
+		font-family: inherit;
+		font-size: large;
+		box-shadow: 0px 5px 5px 0px aliceblue;
+		border: none;
+		border-radius: 10px;
+		cursor: pointer;
+		transition: box-shadow 500ms;
+	}
+	.request-button:hover {
+		box-shadow: 0px 0px 20px 0px aliceblue;
+	}
+	.request-button:active {
+		background-color: #333;
+		transform: translateY(1px);
+	}
+}
