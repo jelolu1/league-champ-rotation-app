@@ -1,15 +1,77 @@
 .champion-container {
-	margin-left: 12px;
-
-	.champion-name {
-		color: #f0f8ff;
-	}
-
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	.champion-img {
 		border-radius: 10px;
 		box-shadow: 0 0 15px #ddd;
 		background: #fff;
+		align-self: center;
+		max-width: 95vw;
 	}
+
+	.champion-data {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		width: 92vw;
+		color: #f0f8ff;
+
+		.champion-name {
+			font-size: 48px;
+			margin: 24px 0;
+			margin-top: 24px;
+		}
+		.champion-label {
+			margin: 0px;
+			font-size: 26px;
+		}
+		.champion-blurb {
+			font-family: inherit;
+		}
+
+		.champion-info {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			gap: 24px;
+			margin: 24px 0;
+		}
+
+		.champion-stats {
+			font-size: 26px;
+			margin: 0;
+			margin-top: 24px;
+		}
+
+		.stats-grid {
+			display: grid;
+			width: 75vw;
+			grid-template-columns: 1fr 1fr;
+			column-gap: 150px;
+		}
+
+		.stat {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 12px;
+			margin: 0;
+		}
+	}
+}
+
+.gradient-text {
+	background-color: red;
+
+	background-image: linear-gradient(45deg, #f3ec78, #af4261);
+
+	background-size: 100%;
+	background-repeat: repeat;
+
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-background-clip: text;
+	-moz-text-fill-color: transparent;
 }
 
 .back-btn {
@@ -22,7 +84,7 @@
 	font-size: large;
 	fill: #f0f8ff;
 	padding: 12px;
-	margin-top: 12px;
+	margin: 24px 36px;
 	border: 2px solid #f0f8ff;
 	border-radius: 10px;
 	width: fit-content;

@@ -5,7 +5,7 @@
 	align-items: center;
 	margin: 32px 0;
 
-	.request-button {
+	.refresh-button {
 		background-color: #222;
 		color: aliceblue;
 		padding: 12px 24px;
@@ -17,10 +17,10 @@
 		cursor: pointer;
 		transition: box-shadow 500ms;
 	}
-	.request-button:hover {
+	.refresh-button:hover {
 		box-shadow: 0px 0px 20px 0px aliceblue;
 	}
-	.request-button:active {
+	.refresh-button:active {
 		background-color: #333;
 		transform: translateY(1px);
 	}

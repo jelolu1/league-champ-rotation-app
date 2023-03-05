@@ -30,7 +30,7 @@ export const Champions = () => {
 	return (
 		<div className={style['container']}>
 			<ChampionsGrid filteredChampions={filteredChampions} />
-			<button onClick={() => makeRequest()} className={style['request-button']}>
+			<button onClick={() => makeRequest()} className={style['refresh-button']}>
 				Refresh
 			</button>
 		</div>
