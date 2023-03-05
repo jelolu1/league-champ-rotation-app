@@ -5,3 +5,9 @@
 	row-gap: 20px;
 	margin-bottom: 20px;
 }
+
+@media only screen and (max-width: 720px) {
+	.champions-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+}

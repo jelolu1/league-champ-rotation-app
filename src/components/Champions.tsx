@@ -16,7 +16,6 @@ export const Champions = () => {
 			}
 		);
 		const data = await response.json();
-		console.log(data);
 	}
 
 	const freeChampionsIds = fetchResponseOk.freeChampionIds;

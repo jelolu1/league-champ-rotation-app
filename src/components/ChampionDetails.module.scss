@@ -1,0 +1,41 @@
+.champion-container {
+	margin-left: 12px;
+
+	.champion-name {
+		color: #f0f8ff;
+	}
+
+	.champion-img {
+		border-radius: 10px;
+		box-shadow: 0 0 15px #ddd;
+		background: #fff;
+	}
+}
+
+.back-btn {
+	display: flex;
+	align-items: center;
+	color: #f0f8ff;
+	font-weight: 600;
+	text-decoration: none;
+	font-family: inherit;
+	font-size: large;
+	fill: #f0f8ff;
+	padding: 12px;
+	margin-top: 12px;
+	border: 2px solid #f0f8ff;
+	border-radius: 10px;
+	width: fit-content;
+
+	transition: background-color 250ms;
+
+	&:hover {
+		background-color: #f0f8ff;
+		color: #222;
+		fill: #222;
+	}
+
+	svg {
+		height: 30px;
+	}
+}
