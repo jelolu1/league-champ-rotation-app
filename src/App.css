@@ -1,0 +1,53 @@
+body {
+	background-image: url('./assets/background.jpg');
+	font-family: 'Montserrat', sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.champions-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 30px;
+	row-gap: 20px;
+	background-color: rgba(34, 34, 34, 0.9);
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 5px 0px aliceblue;
+}
+
+.champion {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.champion-img {
+	max-width: 15vw;
+	min-width: 120px;
+	max-height: 15vh;
+	min-height: 90px;
+	box-shadow: 0px 0px 5px 0px aliceblue;
+	border-radius: 25px;
+	cursor: pointer;
+	transition: all 200ms;
+}
+
+.champion-title {
+	font-size: 20px;
+	color: aliceblue;
+	cursor: pointer;
+}
+
+.champion-img:hover {
+	transform: scale(1.1);
+	box-shadow: 0px 0px 10px 0px aliceblue;
+}
