@@ -48,3 +48,13 @@ export type ChampionPropsType = {
 export type ChampionsGridPropsType = {
 	filteredChampions: Array<singleChampionType>;
 };
+
+export type StatFieldPropsType = {
+	name: string;
+	value: number;
+};
+
+export type InfoFieldPropsType = {
+	name: string;
+	value: number;
+};

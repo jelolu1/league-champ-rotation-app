@@ -1,5 +1,8 @@
 import { NavLink, useLocation } from 'react-router-dom';
+import utilityStyle from '../style/utility.module.scss';
 import style from './ChampionDetails.module.scss';
+import { InfoField } from './InfoField';
+import { StatField } from './StatField';
 
 export const ChampionDetails = () => {
 	const location = useLocation();
@@ -28,131 +31,70 @@ export const ChampionDetails = () => {
 				<div className={style['champion-data']}>
 					<h2 className={style['champion-name']}>{championName}</h2>
 					<h3
-						className={`${style['gradient-text']} ${style['champion-label']}`}
+						className={`${utilityStyle['gradient-text']} ${style['champion-label']}`}
 					>
 						{championTitle.toUpperCase()}
 					</h3>
 					<p className={style['champion-blurb']}> {championBlurb}</p>
 					<h3 className={style['champion-label']}>INFO</h3>
 					<div className={style['champion-info']}>
-						<div>
-							<label className={style['gradient-text']}>Attack</label> -{' '}
-							{championInfo.attack}
-						</div>
-						<div>
-							<label className={style['gradient-text']}>Defense</label> -{' '}
-							{championInfo.defense}
-						</div>
-						<div>
-							<label className={style['gradient-text']}>Magic</label> -{' '}
-							{championInfo.magic}
-						</div>
-						<div>
-							<label className={style['gradient-text']}>Difficulty</label> -{' '}
-							{championInfo.difficulty}
-						</div>
+						<InfoField name="Attack" value={championInfo.attack} />
+						<InfoField name="Defense" value={championInfo.defense} />
+						<InfoField name="Magic" value={championInfo.magic} />
+						<InfoField name="Difficulty" value={championInfo.difficulty} />
 					</div>
 					<h3 className={style['champion-label']}>STATS</h3>
 					<div className={style['stats-grid']}>
-						<div className={style['stat']}>
-							<label className={style['gradient-text']}>HP</label>
-							<p>{championStats.hp}</p>
-						</div>
-						<div className={style['stat']}>
-							<label className={style['gradient-text']}>HP per Lvl.</label>
-							<p>{championStats.hpperlevel}</p>
-						</div>
-
-						<div className={style['stat']}>
-							<label className={style['gradient-text']}>MP</label>
-							<p>{championStats.mp}</p>
-						</div>
-						<div className={style['stat']}>
-							<label className={style['gradient-text']}>MP per Lvl.</label>
-							<p>{championStats.mpperlevel}</p>
-						</div>
-
-						<div className={style['stat']}>
-							<label className={style['gradient-text']}>Armor</label>
-							<p>{championStats.armor}</p>
-						</div>
-						<div className={style['stat']}>
-							<label className={style['gradient-text']}>Armor per Lvl.</label>
-							<p>{championStats.armorperlevel}</p>
-						</div>
-
-						<div className={style['stat']}>
-							<label className={style['gradient-text']}>Spell Block</label>
-							<p>{championStats.spellblock}</p>
-						</div>
-						<div className={style['stat']}>
-							<label className={style['gradient-text']}>
-								Spell Block per Lvl.
-							</label>
-							<p>{championStats.spellblockperlevel}</p>
-						</div>
-
-						<div className={style['stat']}>
-							<label className={style['gradient-text']}>HP Regen</label>
-							<p>{championStats.hpregen}</p>
-						</div>
-						<div className={style['stat']}>
-							<label className={style['gradient-text']}>
-								HP Regen per Lvl.
-							</label>
-							<p>{championStats.hpregenperlevel}</p>
-						</div>
-
-						<div className={style['stat']}>
-							<label className={style['gradient-text']}>MP Regen</label>
-							<p>{championStats.mpregen}</p>
-						</div>
-						<div className={style['stat']}>
-							<label className={style['gradient-text']}>
-								MP Regen per Lvl.
-							</label>
-							<p>{championStats.mpregenperlevel}</p>
-						</div>
-
-						<div className={style['stat']}>
-							<label className={style['gradient-text']}>Critic</label>
-							<p>{championStats.crit}</p>
-						</div>
-						<div className={style['stat']}>
-							<label className={style['gradient-text']}>Critic per Lvl.</label>
-							<p>{championStats.critperlevel}</p>
-						</div>
-
-						<div className={style['stat']}>
-							<label className={style['gradient-text']}>Attack Dmg.</label>
-							<p>{championStats.attackdamage}</p>
-						</div>
-						<div className={style['stat']}>
-							<label className={style['gradient-text']}>
-								Attack Dmg. per Lvl.
-							</label>
-							<p>{championStats.attackdamageperlevel}</p>
-						</div>
-
-						<div className={style['stat']}>
-							<label className={style['gradient-text']}>Attack Speed</label>
-							<p>{championStats.attackspeed}</p>
-						</div>
-						<div className={style['stat']}>
-							<label className={style['gradient-text']}>
-								Attack Speed per Lvl.
-							</label>
-							<p>{championStats.attackspeedperlevel}</p>
-						</div>
-
-						<div className={style['stat']}>
-							<label className={style['gradient-text']}>Move Speed</label>
-							<p>{championStats.movespeed}</p>
-						</div>
-						<div className={style['stat']}>
-							<label className={style['gradient-text']}>Attack Range</label>
-							<p>{championStats.attackrange}</p>
-						</div>
+						<StatField name={'HP'} value={championStats.hp} />
+						<StatField name={'HP per Lvl.'} value={championStats.hpperlevel} />
+						<StatField name={'MP'} value={championStats.mp} />
+						<StatField name={'MP per Lvl.'} value={championStats.mpperlevel} />
+						<StatField name={'Armor'} value={championStats.armor} />
+						<StatField
+							name={'Armor per Lvl.'}
+							value={championStats.armorperlevel}
+						/>
+						<StatField name={'Spell Block'} value={championStats.spellblock} />
+						<StatField
+							name={'Spell Block per Lvl.'}
+							value={championStats.spellblockperlevel}
+						/>
+						<StatField name={'HP Regen'} value={championStats.hpregen} />
+						<StatField
+							name={'HP Regen per Lvl.'}
+							value={championStats.hpregenperlevel}
+						/>
+						<StatField name={'MP Regen'} value={championStats.mpregen} />
+						<StatField
+							name={'MP Regen per Lvl.'}
+							value={championStats.mpregenperlevel}
+						/>
+						<StatField name={'Critic'} value={championStats.crit} />
+						<StatField
+							name={'Critic per Lvl.'}
+							value={championStats.critperlevel}
+						/>
+						<StatField
+							name={'Attack Dmg.'}
+							value={championStats.attackdamage}
+						/>
+						<StatField
+							name={'Attack Dmg. per Lvl.'}
+							value={championStats.attackdamageperlevel}
+						/>
+						<StatField
+							name={'Attack Speed'}
+							value={championStats.attackspeed}
+						/>
+						<StatField
+							name={'Attack Speed per Lvl.'}
+							value={championStats.attackspeedperlevel}
+						/>
+						<StatField name={'Move Speed'} value={championStats.movespeed} />
+						<StatField
+							name={'Attack Range'}
+							value={championStats.attackrange}
+						/>
 					</div>
 				</div>
 			</div>
