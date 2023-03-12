@@ -5,41 +5,37 @@
 	align-items: center;
 
 	.champion-img {
-		max-width: 15vw;
-		min-width: 120px;
-		max-height: 15vh;
-		min-height: 90px;
+		max-height: 24vh;
 		box-shadow: 0px 0px 5px 0px aliceblue;
-		border-radius: 25px;
 		cursor: pointer;
-		transition: all 200ms;
+		transition: all 500ms;
 
 		&:hover {
 			transform: scale(1.1);
 			box-shadow: 0px 0px 10px 0px aliceblue;
+			opacity: 0.4;
 		}
 	}
 
 	.champion-title {
-		font-size: 20px;
+		position: absolute;
+		font-size: 42px;
 		color: aliceblue;
 		cursor: pointer;
 		padding: 6px 12px;
 		border: 2px solid transparent;
 		border-radius: 10px;
+		z-index: -1;
+		background-color: red;
 
-		&:hover {
-			background-color: red;
+		background-image: linear-gradient(45deg, #f3ec78, #af4261);
 
-			background-image: linear-gradient(45deg, #f3ec78, #af4261);
+		background-size: 100%;
+		background-repeat: repeat;
 
-			background-size: 100%;
-			background-repeat: repeat;
-
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			-moz-background-clip: text;
-			-moz-text-fill-color: transparent;
-		}
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		-moz-background-clip: text;
+		-moz-text-fill-color: transparent;
 	}
 }
