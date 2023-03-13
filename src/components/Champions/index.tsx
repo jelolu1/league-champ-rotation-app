@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
-import config from '../config.json';
-import champions from '../json/allChampions.json';
-import { singleChampionType } from '../types';
-import style from './Champions.module.scss';
+import config from '../../config.json';
+import champions from '../../json/allChampions.json';
+import { singleChampionType } from '../../types';
+import { CircleLoading } from '../UI/CircleLoading';
 import { ChampionsGrid } from './ChampionsGrid';
+import style from './index.module.scss';
 
 export const Champions = () => {
 	const [rotationChampionsIds, setRotationChampionsIds] = useState<
@@ -49,11 +50,16 @@ export const Champions = () => {
 	return (
 		<div className={style['container']}>
 			{loading ? (
-				<p>Loading...</p>
+				<CircleLoading />
 			) : !error ? (
 				<ChampionsGrid filteredChampions={filteredChampions} />
 			) : (
-				<p>Failed to Fetch</p>
+				<p className={style['info-message']}>
+					Failed to Fetch
+					<br />
+					<br />
+					Generate a new API Key
+				</p>
 			)}
 		</div>
 	);

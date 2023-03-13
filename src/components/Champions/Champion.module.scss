@@ -8,13 +8,7 @@
 		max-height: 24vh;
 		box-shadow: 0px 0px 5px 0px aliceblue;
 		cursor: pointer;
-		transition: all 500ms;
-
-		&:hover {
-			transform: scale(1.1);
-			box-shadow: 0px 0px 10px 0px aliceblue;
-			opacity: 0.4;
-		}
+		z-index: 1;
 	}
 
 	.champion-title {
@@ -25,8 +19,6 @@
 		padding: 6px 12px;
 		border: 2px solid transparent;
 		border-radius: 10px;
-		z-index: -1;
-		background-color: red;
 
 		background-image: linear-gradient(45deg, #f3ec78, #af4261);
 

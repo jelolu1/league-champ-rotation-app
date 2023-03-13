@@ -28,6 +28,7 @@
 		}
 		.champion-blurb {
 			font-family: inherit;
+			font-size: 18px;
 		}
 
 		.champion-info {
@@ -35,12 +36,7 @@
 			grid-template-columns: 0.5fr 1fr;
 			gap: 24px;
 			margin: 24px 0;
-		}
-
-		.champion-stats {
-			font-size: 26px;
-			margin: 0;
-			margin-top: 24px;
+			font-size: 18px;
 		}
 
 		.stats-grid {
@@ -48,6 +44,7 @@
 			width: 75vw;
 			grid-template-columns: 1fr 1fr;
 			column-gap: 150px;
+			margin-bottom: 48px;
 		}
 	}
 }

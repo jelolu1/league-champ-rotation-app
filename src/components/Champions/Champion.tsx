@@ -1,5 +1,6 @@
-import { NavLink, useNavigate } from 'react-router-dom';
-import { ChampionPropsType } from '../types';
+import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+import { ChampionPropsType } from '../../types';
 import style from './Champion.module.scss';
 
 export const Champion = ({ championInfo }: ChampionPropsType) => {
@@ -15,17 +16,29 @@ export const Champion = ({ championInfo }: ChampionPropsType) => {
 	};
 
 	return (
-		<div key={championInfo.id} className={style['champion']}>
-			<img
+		<motion.div
+			key={championInfo.id}
+			className={style['champion']}
+			initial={{ opacity: 0, scale: 0.5 }}
+			animate={{ opacity: 1, scale: 1 }}
+			transition={{
+				duration: 0.8,
+				delay: 0.5,
+				ease: [0, 0.71, 0.2, 1.01],
+			}}
+		>
+			<motion.img
 				className={style['champion-img']}
 				src={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championInfo.id}_0.jpg`}
 				alt={championName}
 				onClick={handleClick}
+				whileHover={{ scale: [null, 0.9], opacity: 0.25 }}
+				transition={{ duration: 0.3 }}
 			/>
 
-			<h2 className={style['champion-title']} onClick={handleClick}>
+			<motion.div className={style['champion-title']} onClick={handleClick}>
 				{championName}
-			</h2>
-		</div>
+			</motion.div>
+		</motion.div>
 	);
 };

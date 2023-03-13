@@ -1,5 +1,5 @@
-import utilityStyle from '../style/utility.module.scss';
-import { InfoFieldPropsType } from '../types';
+import utilityStyle from '../../style/utility.module.scss';
+import { InfoFieldPropsType } from '../../types';
 import style from './InfoField.module.scss';
 
 export const InfoField = ({ name, value }: InfoFieldPropsType) => {
